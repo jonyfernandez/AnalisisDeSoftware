@@ -409,7 +409,7 @@ public class Ventana {
 					recomendaciones += Constantes.RECO_CC;
 				nroFanOut.setText(analizador.getFanIn(listaMetodos.getSelectedIndex()));
 				nroFanIn.setText(analizador.getFanOut(listaMetodos.getSelectedIndex()));
-				Integer fanOut = Integer.parseInt(analizador.getFanOut(listaMetodos.getSelectedIndex()));
+				Integer fanOut = Integer.parseInt(analizador.getFanIn(listaMetodos.getSelectedIndex()));
 				if(fanOut > (metodosArchivo.size()/2))
 					recomendaciones += Constantes.RECO_FANOUT;
 				nroLongitud.setText(metodo.longitudHalstead());
