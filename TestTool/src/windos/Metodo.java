@@ -95,7 +95,6 @@ public class Metodo {
 		Matcher m = p.matcher(analizar); // solo si esta seguida de un espacio \\s o un parentesis abierto \\(
 		while (m.find()) // https://www.freeformatter.com/java-regex-tester.html
 			nodosPredicados++;
-		original = original.replaceAll(regex, "<b><font color=\"red\">$1</b></font>");// $1 es el elemento encontrado
 		return original;
 	}
 

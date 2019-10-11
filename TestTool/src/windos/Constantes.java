@@ -20,8 +20,8 @@ public class Constantes {
     public static final String OPERADORES_COMPUESTOS ="\\+\\+|--|==|&&|<=|>=|\\|\\|!=";//"operadores que se construyen a partir de otros" cuentan su aparicion sin condiciones.
     public static final String OPERADORES_CARACTER = "\\?|!|=|\\*|/|\\+|-|<|>";// se cuentan cuando aparecen solos y no como parte de un operador compuesto
     public static final String TIPOS_DE_DATO = "int|string|float|char|double|Integer|String|Character|Double|bool|Boolean|File";
-    public static final String RECO_COMENTARIOS = "El porcentaje de l√≠neas comentadas es muy bajo, se recomienda comentar m√°s el m√©todo.\n";
-    public static final String RECO_CC = "La Complejidad Ciclomatica del m√©todo es muy alta, se recomienda modularizarlo.\n";
-    public static final String RECO_FANOUT= "Debido a su Fan Out elevado, se recomienda testear este m√©todo mas exhaustivamente.\n";
-    public static final String RECO_HALSTEAD= "Debido a la relacion entre la longitud de Halstead y la cantidad de lineas, se recomienda dar formato al c√≥digo para hacerlo mas facil de entender.\n";
+    public static final String RECO_COMENTARIOS = "El porcentaje de lÌneas comentadas es muy bajo, se recomienda comentar m·s el mÈtodo.\n";
+    public static final String RECO_CC = "La Complejidad Ciclomatica del mÈtodo es muy alta, se recomienda modularizarlo.\n";
+    public static final String RECO_FANOUT= "Debido a su Fan Out elevado, se recomienda testear este mÈtodo mas exhaustivamente.\n";
+    public static final String RECO_HALSTEAD= "Debido a la relacion entre la longitud de Halstead y la cantidad de lineas, se recomienda dar formato al cÛdigo para hacerlo mas facil de entender.\n";
 }

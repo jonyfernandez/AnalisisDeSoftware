@@ -7,6 +7,7 @@ package windos;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -128,6 +129,9 @@ public class Ventana {
 		((JComponent) frmHerramientaDeTesting.getContentPane()).setBorder(new EmptyBorder(5, 5, 5, 5));
 		frmHerramientaDeTesting.getContentPane().setLayout(null);
 		
+		Image icon = new ImageIcon(getClass().getResource("./tuerca.png")).getImage();
+		frmHerramientaDeTesting.setIconImage(icon);
+		
 		menuBar = new JMenuBar();
 		frmHerramientaDeTesting.setJMenuBar(menuBar);
 		
@@ -149,15 +153,16 @@ public class Ventana {
 
 		PanelAnalisis = new JPanel();
 		PanelAnalisis.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"),
-				"An\u00E1lisis del M\u00E9todo", TitledBorder.CENTER, TitledBorder.TOP, new Font("Tahoma", Font.BOLD, 12), new Color(0, 0, 0)));
+				"Análisis del Método", TitledBorder.CENTER, TitledBorder.TOP, new Font("Tahoma", Font.BOLD, 12), Color.BLUE));
 		PanelAnalisis.setBackground(new Color(255, 204, 153));
 		PanelAnalisis.setBounds(555, 11, 209, 482);
 		panel2.add(PanelAnalisis);
 		PanelAnalisis.setLayout(null);
 
-		lblCantidadDeLneas = new JLabel("Cantidad de l\u00EDneas de c\u00F3digo:");
+		lblCantidadDeLneas = new JLabel("Cantidad de líneas de código:");
 		lblCantidadDeLneas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCantidadDeLneas.setBounds(10, 22, 189, 20);
+		lblCantidadDeLneas.setForeground(Color.BLUE);
 		PanelAnalisis.add(lblCantidadDeLneas);
 
 		nroLineas = new JLabel("");
@@ -172,9 +177,10 @@ public class Ventana {
 		nroLineasComentadas.setBounds(10, 100, 189, 25);
 		PanelAnalisis.add(nroLineasComentadas);
 
-		lblCantidadComentarios = new JLabel("Cantidad de l\u00EDneas con comentarios:");
+		lblCantidadComentarios = new JLabel("Cantidad de líneas con comentarios:");
 		lblCantidadComentarios.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCantidadComentarios.setBounds(10, 79, 189, 20);
+		lblCantidadComentarios.setForeground(Color.BLUE);
 		PanelAnalisis.add(lblCantidadComentarios);
 
 		porcentajeComentarios = new JLabel("");
@@ -183,9 +189,10 @@ public class Ventana {
 		porcentajeComentarios.setBounds(10, 157, 189, 25);
 		PanelAnalisis.add(porcentajeComentarios);
 
-		lblPorcentajeDeLneas = new JLabel("Porcentaje de l\u00EDneas comentadas:");
+		lblPorcentajeDeLneas = new JLabel("Porcentaje de líneas comentadas:");
 		lblPorcentajeDeLneas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPorcentajeDeLneas.setBounds(10, 136, 189, 20);
+		lblPorcentajeDeLneas.setForeground(Color.BLUE);
 		PanelAnalisis.add(lblPorcentajeDeLneas);
 
 		nroComplejidad = new JLabel("");
@@ -194,14 +201,16 @@ public class Ventana {
 		nroComplejidad.setBounds(10, 214, 189, 25);
 		PanelAnalisis.add(nroComplejidad);
 
-		lblComplejidadCiclomtica = new JLabel("Complejidad Ciclom\u00E1tica:");
+		lblComplejidadCiclomtica = new JLabel("Complejidad Ciclomática:");
 		lblComplejidadCiclomtica.setHorizontalAlignment(SwingConstants.CENTER);
 		lblComplejidadCiclomtica.setBounds(10, 193, 189, 20);
+		lblComplejidadCiclomtica.setForeground(Color.BLUE);
 		PanelAnalisis.add(lblComplejidadCiclomtica);
 
 		lblFanIn = new JLabel("Fan In:");
 		lblFanIn.setHorizontalAlignment(SwingConstants.CENTER);
 		lblFanIn.setBounds(10, 244, 94, 20);
+		lblFanIn.setForeground(Color.BLUE);
 		PanelAnalisis.add(lblFanIn);
 
 		nroFanIn = new JLabel("");
@@ -219,11 +228,13 @@ public class Ventana {
 		lblFanOut = new JLabel("Fan Out:");
 		lblFanOut.setHorizontalAlignment(SwingConstants.CENTER);
 		lblFanOut.setBounds(105, 244, 94, 20);
+		lblFanOut.setForeground(Color.BLUE);
 		PanelAnalisis.add(lblFanOut);
 
 		lblLongitudDeHalstead = new JLabel("Longitud de Halstead:");
 		lblLongitudDeHalstead.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLongitudDeHalstead.setBounds(10, 311, 189, 20);
+		lblLongitudDeHalstead.setForeground(Color.BLUE);
 		PanelAnalisis.add(lblLongitudDeHalstead);
 
 		nroLongitud = new JLabel("");
@@ -235,6 +246,7 @@ public class Ventana {
 		lblVolumenDeHalstead = new JLabel("Volumen de Halstead:");
 		lblVolumenDeHalstead.setHorizontalAlignment(SwingConstants.CENTER);
 		lblVolumenDeHalstead.setBounds(10, 378, 189, 20);
+		lblVolumenDeHalstead.setForeground(Color.BLUE);
 		PanelAnalisis.add(lblVolumenDeHalstead);
 
 		nroVolumen = new JLabel("");
@@ -280,7 +292,7 @@ public class Ventana {
 		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		tabbedPane.setBounds(10, 11, 535, 482);
 		tabbedPane.setFont(new Font("Tahoma", Font.BOLD, 11));
-		tabbedPane.addTab("CÃ“DIGO FUENTE", PanelFuente);
+		tabbedPane.addTab("CÓDIGO FUENTE", PanelFuente);
 		//tabbedPane.addTab("Halstead", PanelHalstead);
 		tabbedPane.addTab("RECOMENDACIONES", PanelReco);
 		tabbedPane.setEnabledAt(1, false);
@@ -351,16 +363,19 @@ public class Ventana {
 		lblArchivo = new JLabel("Lista de Archivos");
 		lblArchivo.setBounds(20, 11, 120, 14);
 		lblArchivo.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblArchivo.setForeground(Color.BLUE);
 		frmHerramientaDeTesting.getContentPane().add(lblArchivo);
 
 		lblClase = new JLabel("Lista de Clases");
 		lblClase.setBounds(210, 11, 120, 14);
 		lblClase.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblClase.setForeground(Color.BLUE);
 		frmHerramientaDeTesting.getContentPane().add(lblClase);
 
 		lblMtodo = new JLabel("Lista de Metodos");
 		lblMtodo.setBounds(400, 11, 120, 14);
 		lblMtodo.setFont(new Font("Tahoma", Font.BOLD, 12));
+		lblMtodo.setForeground(Color.BLUE);
 		frmHerramientaDeTesting.getContentPane().add(lblMtodo);
 		
 		
@@ -392,9 +407,10 @@ public class Ventana {
 				nroComplejidad.setText(metodo.getComplejidad());
 				if(metodo.getComplejidadI()>10)
 					recomendaciones += Constantes.RECO_CC;
-				nroFanIn.setText(analizador.getFanIn(listaMetodos.getSelectedIndex()));
-				nroFanOut.setText(analizador.getFanOut(listaMetodos.getSelectedIndex()));
-				if(Integer.parseInt(analizador.getFanOut(listaMetodos.getSelectedIndex()))>(metodosArchivo.size()/2))
+				nroFanOut.setText(analizador.getFanIn(listaMetodos.getSelectedIndex()));
+				nroFanIn.setText(analizador.getFanOut(listaMetodos.getSelectedIndex()));
+				Integer fanOut = Integer.parseInt(analizador.getFanOut(listaMetodos.getSelectedIndex()));
+				if(fanOut > (metodosArchivo.size()/2))
 					recomendaciones += Constantes.RECO_FANOUT;
 				nroLongitud.setText(metodo.longitudHalstead());
 				if(metodo.calcularLongitud()/2>=Integer.parseInt(metodo.getLineas()))
